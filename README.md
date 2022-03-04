@@ -1,1 +1,2 @@
 # Sitecore-Symbiotes
+Test connectivity
