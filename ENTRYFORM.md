@@ -46,10 +46,10 @@ A valid/trusted wildcard certificate for *.sc.localhost
 
 Hosts file entries for
 
-mvp-cd.sc.localhost
-mvp-cm.sc.localhost
-mvp-id.sc.localhost
-mvp.sc.localhost
+- mvp-cd.sc.localhost
+- mvp-cm.sc.localhost
+- mvp-id.sc.localhost
+- mvp.sc.localhost
  
 Required environment variable values in .env for the Sitecore instance
 
