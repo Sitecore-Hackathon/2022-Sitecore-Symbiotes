@@ -5,6 +5,6 @@ namespace Mvp.Feature.ExternalContent.Services
 {
     public interface IStackExchangeAPIService
      {
-        Task<StackExchangeUsersModel> GetstackExchangeUsers();
+        StackExchangeUsersModel GetstackExchangeUsers();
     }
 }

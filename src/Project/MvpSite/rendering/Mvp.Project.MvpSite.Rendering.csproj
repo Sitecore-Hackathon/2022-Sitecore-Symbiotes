@@ -42,6 +42,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\Feature\BasicContent\rendering\Mvp.Feature.BasicContent.Rendering.csproj" />
+        <ProjectReference Include="..\..\..\Feature\ExternalContent\rendering\Mvp.Feature.ExternalContent.Rendering.csproj" />
 		<ProjectReference Include="..\..\..\Feature\Forms\rendering\MVP.Feature.Forms.Rendering.csproj" />
 		<ProjectReference Include="..\..\..\Feature\Navigation\rendering\Mvp.Feature.Navigation.Rendering.csproj" />
 		<ProjectReference Include="..\..\..\Feature\Social\rendering\Mvp.Feature.Social.Rendering.csproj" />
