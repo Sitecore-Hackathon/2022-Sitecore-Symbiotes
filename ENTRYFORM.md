@@ -74,16 +74,5 @@ When prompted, log into Sitecore via your browser, and accept the device authori
 Wait for the startup script to open browser tabs for the rendered site and Sitecore Launchpad.
 
 
-
 ![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
 
-You can embed images of different formats too:
-
-![Deal With It](docs/images/deal-with-it.gif?raw=true "Deal With It")
-
-And you can embed external images too:
-
-![Random](https://thiscatdoesnotexist.com/)
-
-## Comments
-If you'd like to make additional comments that is important for your module entry.
