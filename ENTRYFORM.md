@@ -61,9 +61,9 @@ You must use an elevated/Administrator Windows PowerShell 5.1 prompt for this co
 .\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword"
 At the bottom of the .env file you'll find the section for your Okta developer account details. You will need to populate the following values:
 
-OKTA_DOMAIN (must include protocol, e.g. OKTA_DOMAIN=https://dev-your-id.okta.com)
-OKTA_CLIENT_ID
-OKTA_CLIENT_SECRET
+- OKTA_DOMAIN (must include protocol, e.g. OKTA_DOMAIN=https://dev-your-id.okta.com)
+- OKTA_CLIENT_ID
+- OKTA_CLIENT_SECRET
 Note that DOCKER_RESTART defaults to no but can point to always or other values as per this page - https://docs.docker.com/config/containers/start-containers-automatically/
 
 After completing this environment preparation, run the startup script from the solution root: ps1 .\up.ps1 Note that the up.ps1 script now automatically detects:
