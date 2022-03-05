@@ -21,7 +21,7 @@ namespace Mvp.Feature.ExternalContent.Services
 
         }
 
-        public StackExchangeUsersModel GetstackExchangeUsers()
+        public object GetstackExchangeUsers()
         {
             try
             {            
@@ -35,7 +35,7 @@ namespace Mvp.Feature.ExternalContent.Services
                     using (var reader = new StreamReader(response.GetResponseStream()))
                     {
                         string stream = reader.ReadToEnd();
-                        var data = JsonConvert.DeserializeObject<StackExchangeUsersModel>(stream);
+                        object data = JsonConvert.DeserializeObject<StackExchangeUsersModel>(stream);
                         return data;
                     }
                 }

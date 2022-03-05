@@ -1,5 +1,6 @@
 ﻿//using Mvp.Feature.abc.Services;
 using Mvp.Feature.ExternalContent.Services;
+using Newtonsoft.Json.Linq;
 using Sitecore.LayoutService.Configuration;
 using Sitecore.LayoutService.ItemRendering.ContentsResolvers;
 using Sitecore.Mvc.Presentation;
@@ -17,9 +18,10 @@ namespace Mvp.Feature.ExternalContent.LayoutService
 
         public override object ResolveContents(Rendering rendering, IRenderingConfiguration renderingConfig)
         {
-            
-           return  _stackExchangeAPIService.GetstackExchangeUsers();
-           
+            object obj= _stackExchangeAPIService.GetstackExchangeUsers();
+            return obj;
+
+
         }
 
         

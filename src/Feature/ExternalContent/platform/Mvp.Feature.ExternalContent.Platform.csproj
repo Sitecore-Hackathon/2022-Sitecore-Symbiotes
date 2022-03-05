@@ -4,12 +4,13 @@
     <RootNamespace>Mvp.Feature.ExternalContent</RootNamespace>
     <AssemblyName>Mvp.Feature.ExternalContent</AssemblyName>
     <SitecoreRoleType>platform</SitecoreRoleType>
+    <UserSecretsId>cae36a84-8a24-4652-9082-1a4887890173</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectCapability Include="SupportsSystemWeb" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" />
     <PackageReference Include="Sitecore.Kernel" />
     <PackageReference Include="Sitecore.LayoutService" />
   </ItemGroup>

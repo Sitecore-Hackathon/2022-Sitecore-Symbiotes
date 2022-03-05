@@ -1,7 +1,23 @@
-﻿<section class="column-container two-column-equal background-grey">
-    <div class="container">
-        <div class="row">
-           <h1>Hello</h1>
-        </div>
-    </div>
-</section>
+﻿@model Mvp.Feature.ExternalContent.Models.StackExchangeUsers
+
+
+<!--Stack Exchnage users Cards-->
+<div class="mvp-results-entries row">
+    @foreach (var person in Model.items.ToList())
+    {        
+            <div class="col-lg-4 col-sm-6 col-xs-12 card--wrapper">
+                <div class="card rounded-0">
+                    <a class="content">
+                        <!--Get stack exchange users-->
+                        <div class="mvp-year">@person.owner.display_name</div>
+                        <img class="card-img-top" src="@person.owner.profile_image" alt="@person.owner.display_name" />
+                        <div class="card-body">
+                            <div class="mvp-category">@person.owner.reputation</div>
+                            <h5 class="card-title">@person.owner.link</h5>                         
+                        </div>
+                    </a>
+                </div>
+            </div>
+       
+    }
+</div>
