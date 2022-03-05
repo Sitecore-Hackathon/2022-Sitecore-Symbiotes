@@ -9,7 +9,7 @@
 You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
 
 ## Team name
-⟹ Sitecore symbiotes
+⟹ Sitecore Symbiotes
 
 ## Category
 ⟹ Category # 3: Best addition to the Sitecore MVP site
@@ -31,8 +31,6 @@ _You can alternately paste a [link here](#docs) to a document within this repo c
 
 ## Pre-requisites and Dependencies
 
-⟹ Does your module rely on other Sitecore modules or frameworks?
-
 - Sitecore 10.2
 - .NET Core (>= v 3.1)
 - .NET Framework 4.8
@@ -42,8 +40,6 @@ _You can alternately paste a [link here](#docs) to a document within this repo c
 _Remove this subsection if your entry does not have any prerequisites other than Sitecore_
 
 ## Installation instructions
-⟹ Write a short clear step-wise instruction on how to install your module.  
-
 > Before you can run the solution, you will need to prepare the following for the Sitecore container environment:
 
 A valid/trusted wildcard certificate for *.sc.localhost
