@@ -9,18 +9,17 @@
 You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
 
 ## Team name
-⟹ Write the name of your Hackathon team here
+⟹ Sitecore Symbiotes
 
 ## Category
-⟹ Write the name of the selected category
+⟹ Category # 3: Best addition to the Sitecore MVP site
 
 ## Description
-⟹ Write a clear description of your hackathon entry.  
+⟹ Integrate Sitecore.stackExchange.com to show the users in the MVP site to add "connect to experts" feature
 
-  - Module Purpose
-  - What problem was solved (if any)
-    - How does this module solve it
-
+  - The purpose is to facilitate users to have sitecore.stackExchange.com experts in the MVP website.
+  - This will allow users to directly access sitecore experts questions and anwers from one place.
+    
 _You can alternately paste a [link here](#docs) to a document within this repo containing the description._
 
 ## Video link
@@ -32,56 +31,48 @@ _You can alternately paste a [link here](#docs) to a document within this repo c
 
 ## Pre-requisites and Dependencies
 
-⟹ Does your module rely on other Sitecore modules or frameworks?
-
-- List any dependencies
-- Or other modules that must be installed
-- Or services that must be enabled/configured
+- Sitecore 10.2
+- .NET Core (>= v 3.1)
+- .NET Framework 4.8
+- Okta Developer Account
+- Valid Sitecore license
 
 _Remove this subsection if your entry does not have any prerequisites other than Sitecore_
 
 ## Installation instructions
-⟹ Write a short clear step-wise instruction on how to install your module.  
+> Before you can run the solution, you will need to prepare the following for the Sitecore container environment:
 
-> _A simple well-described installation process is required to win the Hackathon._  
-> Feel free to use any of the following tools/formats as part of the installation:
-> - Sitecore Package files
-> - Docker image builds
-> - Sitecore CLI
-> - msbuild
-> - npm / yarn
-> 
-> _Do not use_
-> - TDS
-> - Unicorn
+A valid/trusted wildcard certificate for *.sc.localhost
+
+Hosts file entries for
+
+- mvp-cd.sc.localhost
+- mvp-cm.sc.localhost
+- mvp-id.sc.localhost
+- mvp.sc.localhost
  
-f. ex. 
+Required environment variable values in .env for the Sitecore instance
 
-1. Start docker environment using `.\Start-Hackathon.ps1`
-2. Open solution in Visual Studio and run build
-3. Use the Sitecore Installation wizard to install the [package](#link-to-package)
-4. ...
-5. profit
+(Can be done once, then checked into source control.)
+See Sitecore Containers documentation for more information on these preparation steps. The provided init.ps1 will take care of them, but you should review its contents before running.
 
-### Configuration
-⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
+You must use an elevated/Administrator Windows PowerShell 5.1 prompt for this command, PowerShell 7 is not supported at this time.
 
-_Remove this subsection if your entry does not require any configuration that is not fully covered in the installation instructions already_
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword"
+At the bottom of the .env file you'll find the section for your Okta developer account details. You will need to populate the following values:
 
-## Usage instructions
-⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
+- OKTA_DOMAIN (must include protocol, e.g. OKTA_DOMAIN=https://dev-your-id.okta.com)
+- OKTA_CLIENT_ID
+- OKTA_CLIENT_SECRET
+Note that DOCKER_RESTART defaults to no but can point to always or other values as per this page - https://docs.docker.com/config/containers/start-containers-automatically/
 
-Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
+After completing this environment preparation, run the startup script from the solution root: ps1 .\up.ps1 Note that the up.ps1 script now automatically detects:
+if running Docker linux daemon and switches to Windows
+and stops IIS if it is running in the machine
+When prompted, log into Sitecore via your browser, and accept the device authorization.
+
+Wait for the startup script to open browser tabs for the rendered site and Sitecore Launchpad.
+
 
 ![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
 
-You can embed images of different formats too:
-
-![Deal With It](docs/images/deal-with-it.gif?raw=true "Deal With It")
-
-And you can embed external images too:
-
-![Random](https://thiscatdoesnotexist.com/)
-
-## Comments
-If you'd like to make additional comments that is important for your module entry.
